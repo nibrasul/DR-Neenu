@@ -162,7 +162,9 @@ export class NeuralUniverse {
     this.init();
     this.animate();
     
-    window.addEventListener('resize', () => this.resize());
+    window.addEventListener('resize', () => {
+      this.init();
+    });
     this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
     this.canvas.addEventListener('click', () => this.handleClick());
   }
@@ -437,7 +439,9 @@ export class VisualGlobe {
     this.initPoints();
     this.animate();
     
-    window.addEventListener('resize', () => this.resize());
+    window.addEventListener('resize', () => {
+      this.initPoints();
+    });
     this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
   }
 
