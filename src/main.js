@@ -273,15 +273,20 @@ window.addEventListener('load', () => {
   mm.add("(min-width: 1025px)", () => {
     const container = document.querySelector('.horizontal-scroll-container');
     if (container) {
+      const getScrollAmount = () => {
+        const diff = container.scrollWidth - window.innerWidth;
+        return diff > 0 ? diff : 0;
+      };
+
       // 1. Smooth horizontal slide of the entire container linked to vertical scroll
       gsap.to(container, {
-        x: () => -(container.scrollWidth - window.innerWidth + 200),
+        x: () => -getScrollAmount(),
         ease: 'none',
         scrollTrigger: {
           trigger: '#speaker',
           pin: true,
           start: 'top top',
-          end: () => '+=' + container.scrollWidth,
+          end: () => '+=' + (getScrollAmount() * 1.2), // slightly slower scroll duration for premium feel
           scrub: 1.5, // buttery smooth scrub lag
           invalidateOnRefresh: true
         }

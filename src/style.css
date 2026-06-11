@@ -65,7 +65,6 @@ html, body {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1204,9 +1203,10 @@ p {
 .horizontal-scroll-container {
   display: flex;
   align-items: center;
-  width: 250vw; /* Accommodate intro card + 4 slides */
+  width: max-content; /* Size container to exactly match its content */
   height: 100%;
   padding: 0 100px;
+  flex-wrap: nowrap;
 }
 
 .speaker-intro-card {
@@ -1259,6 +1259,7 @@ p {
 .speaker-slides-wrapper {
   display: flex;
   gap: 40px;
+  flex-shrink: 0;
 }
 
 .slide-card {
