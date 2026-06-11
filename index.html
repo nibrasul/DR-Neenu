@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Neenu Kuriakose | Cybersecurity & AI Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Background Canvas for Global Particles -->
+    <canvas id="global-particles"></canvas>
+
+    <!-- Glowing Cursor Accent -->
+    <div id="glow-cursor"></div>
+
+    <!-- Persistent Desktop Avatar -->
+    <div class="persistent-avatar-wrapper desktop-only fade-in-init" id="fixed-avatar">
+      <div class="avatar-glow"></div>
+      <img src="/src/assets/avatar.png" alt="Dr. Neenu Kuriakose" class="hero-avatar" />
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="glass-nav">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-accent">&lt;</span> DR. NEENU <span class="logo-accent">/&gt;</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#universe" class="nav-link">Research</a>
+          <a href="#publications" class="nav-link">Publications</a>
+          <a href="#teaching" class="nav-link">Teaching</a>
+          <a href="#vision" class="nav-link">Vision</a>
+          <a href="#speaker" class="nav-link">Speaking</a>
+          <a href="#impact" class="nav-link">Global Impact</a>
+        </nav>
+        <div class="nav-cta">
+          <a href="#contact" class="btn-nav">Connect</a>
+        </div>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer">
+      <nav class="drawer-links">
+        <a href="#about" class="drawer-link">About</a>
+        <a href="#universe" class="drawer-link">Research</a>
+        <a href="#publications" class="drawer-link">Publications</a>
+        <a href="#teaching" class="drawer-link">Teaching</a>
+        <a href="#vision" class="drawer-link">Vision</a>
+        <a href="#speaker" class="drawer-link">Speaking</a>
+        <a href="#impact" class="drawer-link">Global Impact</a>
+        <a href="#contact" class="drawer-link btn-drawer">Connect</a>
+      </nav>
+    </div>
+
+    <!-- Smooth Scroll Container (Lenis) -->
+    <main id="scroll-wrapper">
+      
+      <!-- Section 1 — Hero Reveal -->
+      <section id="hero" class="story-section hero-section">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <h1 class="hero-title" id="hero-name">
+              <!-- Animated letter-by-letter letters will be injected here -->
+            </h1>
+            <div class="hero-tags fade-in-init">
+              <span>Researcher</span>
+              <span class="tag-dot"></span>
+              <span>Author</span>
+              <span class="tag-dot"></span>
+              <span>Educator</span>
+            </div>
+            <p class="hero-quote fade-in-init" id="hero-subtitle">
+              "Exploring the future of Cybersecurity and Artificial Intelligence."
+            </p>
+          </div>
+          
+          <!-- Profile Avatar element that pins and grows (mobile only) -->
+          <div class="hero-avatar-wrapper fade-in-init mobile-only">
+            <div class="avatar-glow"></div>
+            <img src="/src/assets/avatar.png" alt="Dr. Neenu Kuriakose" class="hero-avatar" />
+          </div>
+        </div>
+        <!-- Scroll indicator -->
+        <div class="scroll-down">
+          <span class="scroll-text">Scroll to Begin Journey</span>
+          <span class="scroll-arrow">↓</span>
+        </div>
+      </section>
+
+      <!-- Section 2 — Who I Am -->
+      <section id="about" class="story-section about-section">
+        <div class="container grid-container">
+          <div class="about-left-spacer">
+            <!-- Pinned avatar space, aligned visually with the avatar overlay -->
+          </div>
+          <div class="about-right-content">
+            <div class="reveal-words-wrapper">
+              <h2 class="reveal-word" data-word="teach">I teach.</h2>
+              <h2 class="reveal-word" data-word="research">I research.</h2>
+              <h2 class="reveal-word" data-word="write">I write.</h2>
+              <h2 class="reveal-word" data-word="innovate">I innovate.</h2>
+            </div>
+            
+            <div class="bio-box glass-card">
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">profile_bio.sh</span>
+              </div>
+              <div class="terminal-body">
+                <p id="typewriter-bio" class="bio-text">
+                  <!-- Typewriter text injected by JS -->
+                </p>
+              </div>
+            </div>
+
+            <!-- About Photo Grid -->
+            <div class="about-photos-grid">
+              <div class="about-photo-card glass-card">
+                <div class="photo-wrapper">
+                  <img src="/src/assets/about-1.jpg" alt="Dr. Neenu - Industry Engagement" />
+                </div>
+                <div class="photo-caption">Industry Engagement</div>
+              </div>
+              <div class="about-photo-card glass-card">
+                <div class="photo-wrapper">
+                  <img src="/src/assets/about-2.jpg" alt="Dr. Neenu - Research Collab" />
+                </div>
+                <div class="photo-caption">Research Collaboration</div>
+              </div>
+              <div class="about-photo-card glass-card">
+                <div class="photo-wrapper">
+                  <img src="/src/assets/about-3.jpg" alt="Dr. Neenu - Global Summit" />
+                </div>
+                <div class="photo-caption">Global Tech Forums</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 — Research Universe -->
+      <section id="universe" class="story-section universe-section">
+        <div class="universe-bg-glow"></div>
+        <div class="container universe-container">
+          <div class="section-header center">
+            <span class="section-tag">Academic Sphere</span>
+            <h2 class="section-title">Research Universe</h2>
+            <p class="section-desc">Interactive AI neural network map. Interact with the nodes to explore research highlights.</p>
+          </div>
+          
+          <div class="universe-visual-wrapper">
+            <!-- Neural network interactive canvas -->
+            <canvas id="neural-canvas"></canvas>
+            
+            <!-- Dynamic Info display on hover/selection -->
+            <div id="neural-info-panel" class="glass-card active">
+              <h3 id="node-info-title">Interactive AI Map</h3>
+              <p id="node-info-desc">Hover or click any node to explore key research fields and cybersecurity domains overseen by Dr. Neenu.</p>
+              <div class="node-tags" id="node-info-keywords">
+                <span>Cybersecurity</span>
+                <span>Artificial Intelligence</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 — Publications -->
+      <section id="publications" class="story-section publications-section">
+        <div class="container publications-container">
+          <div class="section-header">
+            <span class="section-tag">Scholarly Work</span>
+            <h2 class="section-title">Publications & Patents</h2>
+            <p class="section-desc">Featured books, journal papers, and patents revolving in a 3D space. Hover to reveal insights.</p>
+          </div>
+
+          <div class="publications-grid-wrapper" id="pub-cards-container">
+            <!-- 3D floating museum cards -->
+            <div class="pub-card glass-card" data-index="0">
+              <div class="pub-tag">Journal Paper</div>
+              <h3 class="pub-title">Deep Learning for Advanced Threat Protection in Cloud Systems</h3>
+              <p class="pub-desc">An in-depth framework utilizing generative adversarial models to predict zero-day vulnerabilities in multi-tenant environments.</p>
+              <div class="pub-meta">
+                <span>IEEE Transactions on Cloud Computing</span>
+                <span>2025</span>
+              </div>
+              <div class="pub-hover-details">
+                <span class="detail-label">Cit. Count:</span> <strong>84+</strong>
+                <span class="detail-label">Impact Factor:</span> <strong>7.1</strong>
+              </div>
+            </div>
+
+            <div class="pub-card glass-card" data-index="1">
+              <div class="pub-tag">Patent</div>
+              <h3 class="pub-title">Decentralized Trust Protocol for Autonomous Drone Networks</h3>
+              <p class="pub-desc">A novel cryptographic mesh protocol preventing GPS spoofing and Sybil attacks on swarming robotics systems without centralized servers.</p>
+              <div class="pub-meta">
+                <span>USPTO / PCT Filed</span>
+                <span>2024</span>
+              </div>
+              <div class="pub-hover-details">
+                <span class="detail-label">Status:</span> <strong>Published</strong>
+                <span class="detail-label">App ID:</span> <strong>US2024/0912</strong>
+              </div>
+            </div>
+
+            <div class="pub-card glass-card" data-index="2">
+              <div class="pub-tag">Reference Book</div>
+              <h3 class="pub-title">Architecting Ethical AI: Integrity in Machine Learning</h3>
+              <p class="pub-desc">A definitive guide mapping regulatory standards, bias correction algorithms, and corporate governance for AI deployments.</p>
+              <div class="pub-meta">
+                <span>Springer Academic Press</span>
+                <span>2023</span>
+              </div>
+              <div class="pub-hover-details">
+                <span class="detail-label">ISBN:</span> <strong>978-3-031-12</strong>
+                <span class="detail-label">Chapters:</span> <strong>14 Chapters</strong>
+              </div>
+            </div>
+
+            <div class="pub-card glass-card" data-index="3">
+              <div class="pub-tag">Conference Paper</div>
+              <h3 class="pub-title">Zero-Trust Architecture: Scalable Solutions for Industry 4.0</h3>
+              <p class="pub-desc">Analyzing network segmentation protocols and dynamic authorization patterns on edge IoT industrial gateways.</p>
+              <div class="pub-meta">
+                <span>ACM Conference on Computer Security</span>
+                <span>2023</span>
+              </div>
+              <div class="pub-hover-details">
+                <span class="detail-label">Award:</span> <strong>Best Paper Nominee</strong>
+                <span class="detail-label">Core Rating:</span> <strong>A*</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5 — Teaching Impact -->
+      <section id="teaching" class="story-section teaching-section">
+        <div class="container teaching-container">
+          <div class="section-header center">
+            <span class="section-tag">Mentorship</span>
+            <h2 class="section-title">Teaching & Mentoring Impact</h2>
+            <p class="section-desc">Fostering cybersecurity talent and ethical engineering principles worldwide.</p>
+          </div>
+
+          <!-- Cinematic Statistics Grid -->
+          <div class="stats-grid">
+            <div class="stat-card glass-card">
+              <span class="stat-label">Students Mentored</span>
+              <div class="stat-number" data-target="5000">0</div>
+              <p class="stat-description">Fostering next-generation technical pioneers and research minds.</p>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-label">Workshops Conducted</span>
+              <div class="stat-number" data-target="120">0</div>
+              <p class="stat-description">Hands-on industrial hacking simulations and AI-alignment seminars.</p>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-label">Research Projects</span>
+              <div class="stat-number" data-target="25">0</div>
+              <p class="stat-description">Funded and collaborative research grants in applied cryptography.</p>
+            </div>
+            <div class="stat-card glass-card">
+              <span class="stat-label">Conferences Presented</span>
+              <div class="stat-number" data-target="80">0</div>
+              <p class="stat-description">International academic presentations and panel leaderships.</p>
+            </div>
+          </div>
+
+          <!-- Cinematic Timeline -->
+          <div class="timeline-wrapper">
+            <!-- SVG Path that draws dynamically as we scroll -->
+            <svg class="timeline-svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+              <path class="timeline-path-bg" d="M 50 0 L 50 800" />
+              <path class="timeline-path-active" d="M 50 0 L 50 800" />
+            </svg>
+
+            <div class="timeline-items">
+              <div class="timeline-item left">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card">
+                  <span class="time-year">2026</span>
+                  <h4>Next-Gen AI Security Initiative</h4>
+                  <p>Co-founding the national framework for Ethical AI standards, integrating adversarial defensive networks into cybersecurity curriculums.</p>
+                </div>
+              </div>
+              <div class="timeline-item right">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card">
+                  <span class="time-year">2024</span>
+                  <h4>IEEE Cyber Leadership Award</h4>
+                  <p>Awarded for excellence in academic mentorship and promoting inclusion in emerging security engineering programs globally.</p>
+                </div>
+              </div>
+              <div class="timeline-item left">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card">
+                  <span class="time-year">2022</span>
+                  <h4>National Cybersecurity Curriculum</h4>
+                  <p>Appointed as lead advisor to redesign university security coursework, introducing IoT hardening and dynamic risk intelligence models.</p>
+                </div>
+              </div>
+              <div class="timeline-item right">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card">
+                  <span class="time-year">2020</span>
+                  <h4>Academic Innovation Summit</h4>
+                  <p>Inaugurated the regional Artificial Intelligence Research Lab, securing $1M in institutional seed grants for quantum-safe cryptographic studies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 — AI & Cybersecurity Vision -->
+      <section id="vision" class="story-section vision-section">
+        <!-- Digital City background elements overlay -->
+        <div class="digital-city-bg">
+          <div class="matrix-column"></div>
+          <div class="matrix-column"></div>
+          <div class="matrix-column"></div>
+          <div class="matrix-column"></div>
+          <div class="matrix-column"></div>
+        </div>
+        <div class="vision-overlay"></div>
+        
+        <div class="container vision-container">
+          <div class="quote-wrapper">
+            <div class="mask-quote-line">
+              <span class="vision-quote">"Technology should empower humanity."</span>
+            </div>
+            <div class="mask-quote-line">
+              <span class="vision-quote glow-cyan">"Security must evolve with intelligence."</span>
+            </div>
+            <div class="mask-quote-line">
+              <span class="vision-quote">"The future belongs to ethical innovation."</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7 — Speaker & Mentor -->
+      <section id="speaker" class="story-section speaker-section">
+        <div class="horizontal-scroll-container">
+          <div class="speaker-intro-card">
+            <span class="section-tag">Engagement</span>
+            <h2 class="section-title">Speaker &<br>Industry Mentor</h2>
+            <p class="section-desc">Keynotes and masterclasses bridging academy and enterprise. Scroll horizontally to view key themes.</p>
+            <div class="scroll-hints">
+              <span class="swipe-line"></span>
+              <span>Scroll down to slide</span>
+            </div>
+          </div>
+          
+          <div class="speaker-slides-wrapper" id="speaker-slider">
+            <div class="slide-card glass-card">
+              <div class="slide-num">01</div>
+              <div class="slide-icon">⚡</div>
+              <h3>Workshops & Cyber Ranges</h3>
+              <p>Structuring interactive live-fire simulation ranges for institutional groups, deploying automated red/blue defense strategies.</p>
+              <span class="slide-badge">Simulations</span>
+            </div>
+
+            <div class="slide-card glass-card">
+              <div class="slide-num">02</div>
+              <div class="slide-icon">🎤</div>
+              <h3>Keynote Addresses</h3>
+              <p>Discussing international regulatory compliance, AI alignment safety guidelines, and modern threat vector intelligence at global summits.</p>
+              <span class="slide-badge">Global Panels</span>
+            </div>
+
+            <div class="slide-card glass-card">
+              <div class="slide-num">03</div>
+              <div class="slide-icon">📚</div>
+              <h3>Guest Lectures</h3>
+              <p>Bridging theory with industry practices, sharing cryptographic architecture breakthroughs and neural network vulnerabilities at research labs.</p>
+              <span class="slide-badge">Ivy Summits</span>
+            </div>
+
+            <div class="slide-card glass-card">
+              <div class="slide-num">04</div>
+              <div class="slide-icon">🏢</div>
+              <h3>Industry Consultations</h3>
+              <p>Advising enterprise technology leaders on risk matrix definitions, security audit templates, and building post-quantum data strategies.</p>
+              <span class="slide-badge">Tech Audits</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8 — Global Impact -->
+      <section id="impact" class="story-section impact-section">
+        <div class="container impact-container">
+          <div class="impact-layout">
+            <div class="impact-left-text">
+              <span class="section-tag">Collaboration</span>
+              <h2 class="section-title">Global Impact</h2>
+              <p class="section-desc">Connecting research communities and institutional hubs. Dr. Neenu’s work shapes policies and tech frameworks on a global scale.</p>
+              
+              <div class="hub-list">
+                <div class="hub-item active" data-lat="42.3601" data-lng="-71.0589" data-label="Boston Hub">
+                  <div class="hub-bullet"></div>
+                  <div>
+                    <h5>Boston, USA</h5>
+                    <p>Research Collaborations in Machine Learning Integrity</p>
+                  </div>
+                </div>
+                <div class="hub-item" data-lat="51.5074" data-lng="-0.1278" data-label="London Advisory">
+                  <div class="hub-bullet"></div>
+                  <div>
+                    <h5>London, UK</h5>
+                    <p>Academic Advisory Board for Cybersecurity Policies</p>
+                  </div>
+                </div>
+                <div class="hub-item" data-lat="12.9716" data-lng="77.5946" data-label="Bangalore Tech Policy">
+                  <div class="hub-bullet"></div>
+                  <div>
+                    <h5>Bangalore, India</h5>
+                    <p>AI Governance & Technology Policy Keynotes</p>
+                  </div>
+                </div>
+                <div class="hub-item" data-lat="35.6762" data-lng="139.6503" data-label="Tokyo Symposium">
+                  <div class="hub-bullet"></div>
+                  <div>
+                    <h5>Tokyo, Japan</h5>
+                    <p>Asia-Pacific Emerging Tech Keynote Sessions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="impact-right-globe">
+              <!-- 3D Projected Globe Canvas -->
+              <canvas id="globe-canvas"></canvas>
+              <div class="globe-info-tooltip" id="globe-tooltip">Hover nodes on the globe or left menu to explore.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9 — Final CTA -->
+      <section id="contact" class="story-section cta-section">
+        <div class="container cta-container">
+          <!-- Morphing glowing circle background -->
+          <div class="morph-glow-circle"></div>
+
+          <div class="cta-inner-card glass-card">
+            <h2 class="cta-name">Dr. Neenu Kuriakose</h2>
+            <div class="cta-tags">
+              <span>Researcher</span>
+              <span class="tag-dot"></span>
+              <span>Author</span>
+              <span class="tag-dot"></span>
+              <span>Educator</span>
+            </div>
+            
+            <p class="cta-statement">
+              "Researching the Future. Securing the Digital World. Empowering Through Education."
+            </p>
+            
+            <div class="cta-actions">
+              <button class="btn-primary" id="open-contact-btn">Initiate Connection</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-minimal">
+          <div class="footer-links">
+            <a href="tel:+919946911587" class="footer-link-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+91 99469 11587</span>
+            </a>
+            <span class="footer-divider">|</span>
+            <a href="https://www.instagram.com/dr.neenu_jessin?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="footer-link-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="footer-icon"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+          <p>© 2026 Dr. Neenu Kuriakose. All rights reserved.</p>
+          <p class="footer-credit">Designed for futuristic academic integrity.</p>
+        </footer>
+      </section>
+
+    </main>
+
+    <!-- Glass Overlay Connection Form -->
+    <div class="contact-modal-overlay" id="contact-modal">
+      <div class="contact-modal-card glass-card">
+        <button class="close-modal-btn" id="close-contact-btn" aria-label="Close modal">×</button>
+        <h3>Establish Contact</h3>
+        <p>Connect for academic peer reviews, collaborative research, panel invites, or speaking engagements.</p>
+        
+        <form class="contact-form" id="portfolio-contact-form">
+          <div class="form-group">
+            <label for="form-name">Name</label>
+            <input type="text" id="form-name" placeholder="Dr. Jane Doe / John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="form-email">Email Address</label>
+            <input type="email" id="form-email" placeholder="collaborator@institution.edu" required>
+          </div>
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <select id="form-subject">
+              <option value="research">Collaborative Research Project</option>
+              <option value="speaking">Speaking Engagement / Panel Invitation</option>
+              <option value="advisory">Advisory & Consultancy Inquiry</option>
+              <option value="mentorship">Academic Mentorship & Syllabi</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="form-message">Brief Proposal / Message</label>
+            <textarea id="form-message" rows="4" placeholder="Brief outline of the agenda..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-submit">Send Secure Handshake</button>
+        </form>
+        <div class="form-success-msg" id="form-success">
+          <div class="success-icon">✓</div>
+          <h4>Connection Initialized</h4>
+          <p>Your research handshake packet was dispatched. A response will be coordinated shortly.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script Entry -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
